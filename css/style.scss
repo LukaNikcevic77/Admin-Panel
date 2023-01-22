@@ -1,238 +1,140 @@
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+//Font scalable sizes
+$font-size-sm: clamp(0.8rem, -0.25vw + 0.95rem, 0.75rem);
+$font-size-base: clamp(1rem, 0vw + 1rem, 1rem);
+$font-size-md: clamp(1.25rem, 0.42vw + 1rem, 1.33rem);
+$font-size-lg: clamp(1.56rem, 1.09vw + 0.91rem, 1.78rem);
+$font-size-xl: clamp(1.95rem, 2.1vw + 0.69rem, 2.37rem);
+$font-size-xxl: clamp(2.44rem, 3.62vw + 0.26rem, 3.16rem);
+$font-size-xxxl: clamp(3.05rem, 5.86vw + -0.48rem, 4.21rem);
 
-// ##############################33
 
-$darkest-blue: #243763;
-$orange: #FF6E31;
-$oker: #FFEBB7;
-$brown: #AD8E70;
+*{
 
-body {
+    margin: 0;
+    padding: 0;
     
-    min-width: 100%;
-    min-height: 100%;
+}
 
-    @media (min-width: 320px) {
+ body {
 
-        .dashboard {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    background-color: red;
+    font-size: $font-size-base;
 
-            bottom: 0;
-            position: fixed;
-            min-width: 100%;
-            min-height: 5%;
-            
-            
-        }
-            
-            .preview {
-                
-                min-height: 100%;
-                min-width: 100%;
-               
-                
-                .searchpart {
+    nav {
 
-                    min-width: 100%;
-                    min-height: 10vh;
-                    
-                }
-
-                .contentpart {
-
-                    min-height: 100vh;
-                    min-width: 100%;
-                    
-
-                    .leftside {
-                        grid-template-rows: repeat(6, 1fr);
-                        gap: 20px;
-                        max-width: 80%;
-                        margin-inline: auto;
-                        margin-top: 15px;
-                        
-                    }
-
-                    .rightside{
-
-                        min-height: 80vh;
-                        max-width: 60%;
-                        max-width: 80%;
-                        margin-inline: auto;
-                        margin-top: 15px;
-                        border: 2px solid red;
-                    }
-                }
-
-            }
-                
-            
-
-            
-        }
-
-    @media (min-width: 640px) {
-
-            .dashboard {
-
-               bottom: 0;
-               position: fixed;
-               min-width: 100%;
-               min-height: 5%; 
-            }
-
-            .preview {
-                
-                min-height: 100vh;
-                min-width: 100%;
-                
-                
-                .searchpart {
-
-                    min-width: 100%;
-                    min-height: 10vh;
-                   
-                    
-                }
-
-            }
-            
-
-        }
-
-    @media (min-width: 1366px) {
-
-            .dashboard {
-
-                min-width: 20%;
-                min-height: 100%;
-            }
-
-            .preview {
-                
-                min-height: 100vh;
-                min-width: 100%;
-                
-                
-                .searchpart {
-
-                    min-width: 100%;
-                    min-height: 20vh;
-                    
-                    
-                }
-
-            }
-            
-            
-        }
-
-    .dashboard {
-        background-color: $darkest-blue;
-        color: $orange;
+        width: 100vw;
+        min-width: 100%;
+        height: 20vh;
+        max-height: 20vh;
+        background-color: lime;
     }
-    .searchpart {
-        background-color: $orange;
-    }
-    .preview {
-        background-color: $brown;
-    }
-    .contentpart {
-        background-color: $brown;
-    }
-    .leftside {
-        display: grid;
-        min-height: 100vh;
+
+    aside {
         
-    }
-    
-    .cardholder {
-            background-color: $oker;
-            border-radius: 20px;
-    }
-    .announcments{
-        background-color: $oker;
-        h1 {
-            margin-left: 50px;
+        position: absolute;
+        min-height: 100%;
+        width: clamp(20%, 250px, 300px);
+        background-color: pink;
+        top: 0;
+        left: 0;
+
+        
+        }
+
+        span {
+            
+            display: flex;
+            align-items: center;
+            gap: clamp(5%, 10%, 20px);
+            margin-left: 12%;
+            padding-top: 7%;
+            font-size: calc($font-size-md + 25%);
+            
+            p {
+                font-weight: bold;
+                margin-left: 5%;
+            }
+            i {
+                font-size: $font-size-base;
+            }
+            &:nth-child(2){
+                padding-top: 12.5%;
+            }
+            &:nth-child(7){
+                padding-top: 25%;
+                
+                
+                
+            }
         }
         
-        p {
-            border-top: 1px solid #c8cacfd7;
-            width: 80%;
-           
-        }
+        .Heading {
+
+            font-size: $font-size-xl;
+            margin-left: 9%;
+
+            i {
+                font-size: calc($font-size-xxl - 30%);
+                
+            }
+            p {
+                
+                margin-left: 0%;
+            }
     }
-    img {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
+
+    main {
+
+        height:  80%;
+        width: 100%;
+        max-width: 100vw;
+        max-height: 100vh;
+        background-color: skyblue;
     }
-    .trending {
-        
-        max-width: 80%;
-        margin-inline: auto;
+
+    footer {
+
+        display: none;
+        height: 10vh;
+        width: 100%;
+        max-width: 100vw;
         background-color: aquamarine;
-        border-radius: 20px;
-        margin-bottom: 55px;
-        div {
-            max-width: 80%;
-            display: grid;
-            grid-template-columns: repeat(2, 50px 1fr);
-            gap: 0px 5%;
-            
-            padding-top: 5%;
-            padding-left: 12%;
-            text-align: center;
-            
-
-
-            span {
-                width: 37vw;
-                margin-top: 10px;
-            }
-        }
     }
-}
 
+@media (max-width: 964px){
+
+        nav {
+
+            height: 10vh;
+            position: fixed;
+                        
+        }
+
+        aside {
+
+            display: none;
+
+        }
+        main {
+
+            height: 100%;
+        }
+
+        footer {
+
+            height: calc(100vh / 5.6);
+            max-height: 55px;
+            position: fixed;
+            bottom: 0;
+            display: block;
+        }
+    
+ }
+ 
+        
+  }
