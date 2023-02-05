@@ -1,5 +1,4 @@
-
-//Font scalable sizes
+    //Font scalable sizes
 $font-size-sm: clamp(0.8rem, -0.25vw + 0.95rem, 0.75rem);
 $font-size-base: clamp(1rem, 0vw + 1rem, 1rem);
 $font-size-md: clamp(1.25rem, 0.42vw + 1rem, 1.33rem);
@@ -38,7 +37,13 @@ $font-size-xxxl: clamp(3.05rem, 5.86vw + -0.48rem, 4.21rem);
 
     margin: 0;
     padding: 0;
+    font-size: 16px;
     
+
+}
+
+html {
+
 }
 
  body {
@@ -80,9 +85,37 @@ $font-size-xxxl: clamp(3.05rem, 5.86vw + -0.48rem, 4.21rem);
             p {
                 font-weight: bold;
                 margin-left: 5%;
+
+                @media (min-height: 864px){
+                    font-size: 1.6rem;
+                }
+                @media (min-height: 900px) {
+
+                    font-size: 1.5rem;
+                    
+                }
+                @media (min-height: 1080px){
+                    font-size: 2rem;
+                }
+                @media (min-height: 1440px){
+                    font-size: 2.7rem;
+                }
             }
             i {
-                font-size: $font-size-base;
+                @media (min-height: 864px){
+                    font-size: 1rem;
+                }
+                @media (min-height: 900px) {
+
+                    font-size: 1rem;
+                    
+                }
+                @media (min-height: 1080px){
+                    font-size: 1.4rem;
+                }
+                @media (min-height: 1440px){
+                    font-size: 2.3rem;
+                }
             }
             &:nth-child(2){
                 padding-top: 12.5%;
@@ -104,12 +137,44 @@ $font-size-xxxl: clamp(3.05rem, 5.86vw + -0.48rem, 4.21rem);
             margin-left: 9%;
 
             i {
-                font-size: calc($font-size-xxl - 30%);
                 
+
+                
+                @media (min-height: 720px) {
+                    font-size: 2.5rem;
+                }
+                @media (min-height: 864px){
+                    font-size: 2.8rem;
+                }
+                @media (min-height: 900px) {
+
+                    font-size: 3rem;
+                    
+                }
+                @media (min-height: 1440px){
+                    font-size: 5rem;
+                }
             }
-            p {
+            p { 
+                
                 
                 margin-left: 0%;
+
+                
+                @media (min-height: 720px) {
+                    font-size: 1.9rem;
+                }
+                @media (min-height: 864px){
+                    font-size: 2.1rem;
+                }
+                @media (min-height: 900px) {
+
+                    font-size: 2.5rem;
+                    
+                }
+                @media (min-height: 1440px){
+                    font-size: 4.4rem;
+                }
             }
     }
 
@@ -138,25 +203,62 @@ $font-size-xxxl: clamp(3.05rem, 5.86vw + -0.48rem, 4.21rem);
             gap: 20px 20px;
             background-color: lightcoral;
             grid-area: grid-wrap;
+            //ex heigth: clamp(50vh, 86%, 70vh);
             height: clamp(50vh, 86%, 70vh);
             max-width: 90%;
 
             .tab {
+                
                 background-color: wheat;
+                //height of grid-wrap is
+                //ex padding padding: 10% 10% 5% 10%;
                 padding: 10% 10% 5% 10%;
+                
+                
+                
                 border-radius: 10px;
                 h1 {
-                    font-size: $font-size-base;
+                    font-size: 1.6rem;
 
+                    /* Media querries */
+                    @media (max-height: 900px) {
+
+                       font-size: 1.3rem;
+                    
+                 }
+                    @media (max-height: 800px){
+                        font-size: 1rem;
+                    }
+
+                    @media (min-height: 1440px){
+                    font-size: 2rem;
                 }
+                }
+                
+
                 p {
-                    font-size: $font-size-sm;
-                    max-width: 300px;
+                    font-size: 1.2rem;
+                    max-width: 400px;
+
+                    @media (max-height: 900px) {
+
+                        font-size: 1rem;
+                        max-width: 400px;
+                    }
+                    @media (max-height: 800px) {
+                        font-size: 0.7rem;
+                    }
+                    @media (min-height: 1440px){
+                        font-size: 1.5rem;
+                    }
+                    
                 }
                 .span2 {
                     float: right;
                     margin-top: 12%;
                     letter-spacing: 0.5em;
+                    
+                    
                 }
                 
             }
@@ -164,29 +266,99 @@ $font-size-xxxl: clamp(3.05rem, 5.86vw + -0.48rem, 4.21rem);
 
         .announcment-holder {
             grid-area: announcment-holder;
+            //ex width: clamp(40%, 22vw, 40%);
             width: clamp(40%, 22vw, 40%);
             margin-left: -10%;
-            height: clamp(60%, 35vh, 70%);
-            padding: 3% 5% 2% 5% ;
+            //ex height: clamp(60%, 35vh, 70%);
+            
+            padding: 3% 5% 0% 5% ;
             background-color: red;
             border-radius: 10px;
 
+            
+
             article {
                 border-bottom: 1px solid black ;
-                padding-bottom: 3%;
+                padding-bottom: 5%;
                 padding-top: 8%;
 
+                @media (min-height: 1440px){
+                    padding-top: 5%;
+                }
+
                 h1 {
-                    font-size: $font-size-base;
+                    
+
+                    @media (min-height: 720px) {
+                        font-size: 1rem;
+                    }
+                    @media (min-height: 864px){
+                        font-size: 1.2rem;
+                    }
+                    @media (min-height: 900px) {
+    
+                        font-size: 1.3rem;
+                        
+                    }
+                    @media (min-height: 1440px){
+                        font-size: 2.1rem;
+                    }
                 }
                 p {
-                    font-size: $font-size-sm;
+                    @media (min-height: 720px) {
+                        font-size: 0.8rem;
+                    }
+                    @media (min-height: 864px){
+                        font-size: 1rem;
+                    }
+                    @media (min-height: 900px) {
+    
+                        font-size: 1rem;
+                        
+                    }
+                    @media (min-height: 1440px){
+                        font-size: 1.5rem;
+                        max-width: 550px;
+                    }
                 }
                 &:nth-child(1){
                     padding-top: 0%;
+                    
+                    @media (min-height: 800px){
+                        padding-top: 5%;
+                    }
+                    @media (min-height: 900px) {
+    
+                        padding-top: 1%;
+                        
+                    }
+                    @media (min-height: 1120px){
+                        padding-top: 5%;
+                    }
+                    @media (min-height: 1440px){
+                        padding-top: 2%;
+                    }
                 }
                 &:nth-child(3){
                     border-bottom: none;
+                    padding-bottom: 0%;
+                    @media (min-height: 720px) {
+                        margin-bottom: -8vh;
+                    }
+                    @media (min-height: 800px){
+                        margin-bottom: -9vh;
+                    }
+                    @media (min-height: 900px) {
+    
+                        margin-bottom: -11vh;;
+                        
+                    }
+                    @media (min-height: 1050px){
+                        margin-bottom: -15vh;
+                    }
+                    @media (min-height: 1440px){
+                        margin-bottom: -13vh;
+                    }
                 }
             }
 
@@ -201,24 +373,89 @@ $font-size-xxxl: clamp(3.05rem, 5.86vw + -0.48rem, 4.21rem);
             width: clamp(40%, 22vw, 40%);
             grid-area: trending-holder;
             background-color: red;
-            margin-top: -5%;
+            //margin-top: -5%;
             margin-left: -10%;
+            
             padding: 3% 5% 2% 5%;
             border-radius: 10px;
+            @media (min-height: 1440px){
+                margin-bottom: -105px;
+            }
             .HolderOfTrend {
                 display: flex;
                 justify-items: center;
                 gap: 5%;
                 margin-top: 5%;
-                
+               
                 img {
-                    height: 40px;
-                    width:  40px;
+                    @media (min-height: 720px){
+                        height: 35px;
+                        width: 35px;
+                    }
+                    @media (min-height: 800px){
+                        height: 40px;
+                        width: 40px;
+                    }
+                    @media (min-height: 900px) {
+    
+                        height: 45px;
+                        width: 45px;
+                        
+                    }
+                    @media (min-height: 1050px){
+                        height: 55px;
+                        width: 55px;
+                    }
+                    @media (min-height: 1440px){
+                        height: 80px;
+                        width: 80px;
+
+                    }
                     border-radius: 50%;
                 }
 
+
                 &:nth-child(1) {
                     margin-top: 0px;
+                    
+                }
+
+                span {
+
+                    
+                    .tag {
+                        font-weight: bold;
+
+                    
+                    @media (min-height: 900px) {
+    
+                        font-size: 1.3rem;
+                        
+                    }
+                    
+                    @media (min-height: 1440px){
+                        font-size: 2rem;
+
+                    }
+                        }
+
+                    .desc {
+
+                       
+                        @media (min-height: 900px) {
+        
+                            font-size: 1rem;
+                            
+                        }
+                        @media (min-height: 1050px){
+                            font-size: 1.3rem;
+                        }
+                        @media (min-height: 1440px){
+                            font-size: 1.8rem;
+    
+                        }
+                    }
+                   
                 }
             }
         }
@@ -264,6 +501,11 @@ $font-size-xxxl: clamp(3.05rem, 5.86vw + -0.48rem, 4.21rem);
         }
     
  }
+
+
+
+
  
+
         
   
