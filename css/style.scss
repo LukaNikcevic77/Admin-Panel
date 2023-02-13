@@ -44,7 +44,11 @@ $font-size-xxxl: clamp(3.05rem, 5.86vw + -0.48rem, 4.21rem);
 
 html {
     overflow: hidden;
-    
+    @media (min-height: 641px) and (max-width: 768px){
+        overflow-y: auto;
+        overflow-x: hidden;
+         
+    }
 }
 
  body {
@@ -56,7 +60,15 @@ html {
     background-color: red;
     font-size: $font-size-base;
     overflow: hidden;
-    
+    @media (min-height: 641px) and (max-width: 768px){
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-bottom: 70vh;
+         
+    }
+    @media (min-height: 641px) and (max-width: 425px){
+        padding-bottom: 100vh;
+    }
     nav {
         display: grid;
         grid-template-columns: 0.5fr 1.5fr;
@@ -631,7 +643,28 @@ html {
         max-width: 100vw;
         max-height: 100vh;
         background-color: skyblue;
-
+        
+        @media (min-height: 641px) and (max-width: 768px){
+            grid-template-areas: 
+        "grid-wrap grid-wrap"
+        "grid-wrap grid-wrap"
+        "announcment-holder trending-holder";
+        padding-top: 22vh;
+        padding-left: 4vh;
+             
+        }
+        @media (min-height: 641px) and (max-width: 425px){
+            grid-template-areas: 
+            "grid-wrap"
+            "grid-wrap"
+            "grid-wrap"
+            "grid-wrap"
+            "grid-wrap"
+            "grid-wrap"
+            "announcment-holder"
+            "trending-holder";
+                      
+        }
         .grid-wrap {
             display: grid;
             grid-template-areas:
@@ -645,6 +678,7 @@ html {
             //ex heigth: clamp(50vh, 86%, 70vh);
             height: clamp(50vh, 86%, 70vh);
             max-width: 90%;
+            
 
             .tab {
                 
@@ -653,7 +687,7 @@ html {
                 //ex padding padding: 10% 10% 5% 10%;
                 padding: 10% 10% 5% 10%;
                 
-                
+               
                 
                 border-radius: 10px;
                 h1 {
@@ -732,21 +766,32 @@ html {
             padding: 3% 5% 0% 5% ;
             background-color: red;
             border-radius: 10px;
-
             
-
+            @media (min-height: 641px) and (max-width: 768px){
+                margin-right: 0px;
+                 margin-left: 0vw;
+                 background-color: wheat;
+                 width: clamp(40%, 39vw, 90%);
+            }
+            @media (min-height: 641px) and (max-width: 425px){
+                width: clamp(40%, 80vw, 90%);
+            }
             article {
                 border-bottom: 1px solid black ;
                 padding-bottom: 5%;
                 padding-top: 8%;
-
+                @media (min-height: 641px) and (max-width: 768px){
+                    padding: 3vw;
+                }
                 @media (min-height: 1440px){
                     padding-top: 5%;
                 }
 
                 h1 {
                     
-
+                    @media (min-height: 641px) and (max-width: 768px){
+                        font-size: 1rem;
+                    }
                     @media (min-height: 720px) {
                         font-size: 1rem;
                     }
@@ -763,6 +808,9 @@ html {
                     }
                 }
                 p {
+                    @media (min-height: 641px) and (max-width: 768px){
+                        font-size: 0.9rem;
+                    }
                     @media (min-height: 720px) {
                         font-size: 0.8rem;
                     }
@@ -781,7 +829,9 @@ html {
                 }
                 &:nth-child(1){
                     padding-top: 0%;
-                    
+                    @media (min-height: 641px) and (max-width: 768px){
+                        padding-top: 5%;
+                    }
                     @media (min-height: 800px){
                         padding-top: 5%;
                     }
@@ -800,6 +850,9 @@ html {
                 &:nth-child(3){
                     border-bottom: none;
                     padding-bottom: 0%;
+                    @media (min-height: 641px) and (max-width: 768px){
+                        padding-bottom: 5%;
+                    }
                     @media (min-height: 720px) {
                         margin-bottom: -8vh;
                     }
@@ -836,6 +889,22 @@ html {
             
             padding: 3% 5% 2% 5%;
             border-radius: 10px;
+            @media (min-height: 641px) and (max-width: 768px){
+                background-color: wheat;
+                height: clamp(70%, 45vh, 100%);
+                width: clamp(50%, 42vw, 70%);
+                margin-right: 30vw;
+                margin-left: 0%;
+                padding: 0 auto;
+                padding-top: 5vh;
+                padding-bottom: 3vh;
+                justify-content: space-around;
+                     
+                 
+            }
+            @media (min-height: 641px) and (max-width: 425px){
+                width: clamp(40%, 80vw, 90%);
+            }
             @media (min-height: 1440px){
                 margin-bottom: -105px;
             }
@@ -844,8 +913,26 @@ html {
                 justify-items: center;
                 gap: 5%;
                 margin-top: 5%;
-               
+                @media (min-height: 641px) and (max-width: 768px){
+                    
+                     margin-top: 0px;
+                     
+                     
+                }
                 img {
+
+                    @media (min-height: 641px) and (max-width: 768px){
+                    height: 40px;
+                    width: 40px;
+                     
+                 }
+                 @media (min-height: 641px) and (max-width: 425px){
+                   
+                    
+                  }
+                  @media (min-height: 641px) and (max-width: 320px) {
+                        
+                }
                     @media (min-height: 720px){
                         height: 35px;
                         width: 35px;
@@ -899,6 +986,7 @@ html {
 
                     .desc {
 
+                        
                        
                         @media (min-height: 900px) {
         
@@ -922,13 +1010,34 @@ html {
     
 
     footer {
-
+        @media (min-height: 641px) and (max-width: 768px){
+            height: calc(100vh / 5.6);
+            max-height: 55px;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
         display: none;
         height: 10vh;
         width: 100%;
         max-width: 100vw;
         background-color: aquamarine;
+
+        i {
+            font-size: 28px;
+            @media (min-height: 641px) and (max-width: 425px){
+                font-size: 24px;
+            }
+            @media (min-height: 641px) and (max-width: 320px){
+                font-size: 18px;
+            }
+        }
+        
+        
     }
+    
 
 @media (max-width: 964px){
 
@@ -949,14 +1058,7 @@ html {
             height: 100%;
         }
 
-        footer {
-
-            height: calc(100vh / 5.6);
-            max-height: 55px;
-            position: fixed;
-            bottom: 0;
-            display: block;
-        }
+        
     
  }
 

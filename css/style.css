@@ -31,6 +31,12 @@
 html {
   overflow: hidden;
 }
+@media (min-height: 641px) and (max-width: 768px) {
+  html {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
 
 body {
   width: 100vw;
@@ -40,6 +46,18 @@ body {
   background-color: red;
   font-size: clamp(1rem, 0vw + 1rem, 1rem);
   overflow: hidden;
+}
+@media (min-height: 641px) and (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 70vh;
+  }
+}
+@media (min-height: 641px) and (max-width: 425px) {
+  body {
+    padding-bottom: 100vh;
+  }
 }
 body nav {
   display: grid;
@@ -701,6 +719,18 @@ body main {
   max-height: 100vh;
   background-color: skyblue;
 }
+@media (min-height: 641px) and (max-width: 768px) {
+  body main {
+    grid-template-areas: "grid-wrap grid-wrap" "grid-wrap grid-wrap" "announcment-holder trending-holder";
+    padding-top: 22vh;
+    padding-left: 4vh;
+  }
+}
+@media (min-height: 641px) and (max-width: 425px) {
+  body main {
+    grid-template-areas: "grid-wrap" "grid-wrap" "grid-wrap" "grid-wrap" "grid-wrap" "grid-wrap" "announcment-holder" "trending-holder";
+  }
+}
 body main .grid-wrap {
   display: grid;
   grid-template-areas: "card-1 card-2" "card-3 card-4" "card-5 card-6";
@@ -788,14 +818,37 @@ body .announcment-holder {
   background-color: red;
   border-radius: 10px;
 }
+@media (min-height: 641px) and (max-width: 768px) {
+  body .announcment-holder {
+    margin-right: 0px;
+    margin-left: 0vw;
+    background-color: wheat;
+    width: clamp(40%, 39vw, 90%);
+  }
+}
+@media (min-height: 641px) and (max-width: 425px) {
+  body .announcment-holder {
+    width: clamp(40%, 80vw, 90%);
+  }
+}
 body .announcment-holder article {
   border-bottom: 1px solid black;
   padding-bottom: 5%;
   padding-top: 8%;
 }
+@media (min-height: 641px) and (max-width: 768px) {
+  body .announcment-holder article {
+    padding: 3vw;
+  }
+}
 @media (min-height: 1440px) {
   body .announcment-holder article {
     padding-top: 5%;
+  }
+}
+@media (min-height: 641px) and (max-width: 768px) {
+  body .announcment-holder article h1 {
+    font-size: 1rem;
   }
 }
 @media (min-height: 720px) {
@@ -816,6 +869,11 @@ body .announcment-holder article {
 @media (min-height: 1440px) {
   body .announcment-holder article h1 {
     font-size: 2.1rem;
+  }
+}
+@media (min-height: 641px) and (max-width: 768px) {
+  body .announcment-holder article p {
+    font-size: 0.9rem;
   }
 }
 @media (min-height: 720px) {
@@ -842,6 +900,11 @@ body .announcment-holder article {
 body .announcment-holder article:nth-child(1) {
   padding-top: 0%;
 }
+@media (min-height: 641px) and (max-width: 768px) {
+  body .announcment-holder article:nth-child(1) {
+    padding-top: 5%;
+  }
+}
 @media (min-height: 800px) {
   body .announcment-holder article:nth-child(1) {
     padding-top: 5%;
@@ -865,6 +928,11 @@ body .announcment-holder article:nth-child(1) {
 body .announcment-holder article:nth-child(3) {
   border-bottom: none;
   padding-bottom: 0%;
+}
+@media (min-height: 641px) and (max-width: 768px) {
+  body .announcment-holder article:nth-child(3) {
+    padding-bottom: 5%;
+  }
 }
 @media (min-height: 720px) {
   body .announcment-holder article:nth-child(3) {
@@ -903,6 +971,24 @@ body .trending-holder {
   padding: 3% 5% 2% 5%;
   border-radius: 10px;
 }
+@media (min-height: 641px) and (max-width: 768px) {
+  body .trending-holder {
+    background-color: wheat;
+    height: clamp(70%, 45vh, 100%);
+    width: clamp(50%, 42vw, 70%);
+    margin-right: 30vw;
+    margin-left: 0%;
+    padding: 0 auto;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    justify-content: space-around;
+  }
+}
+@media (min-height: 641px) and (max-width: 425px) {
+  body .trending-holder {
+    width: clamp(40%, 80vw, 90%);
+  }
+}
 @media (min-height: 1440px) {
   body .trending-holder {
     margin-bottom: -105px;
@@ -914,8 +1000,19 @@ body .trending-holder .HolderOfTrend {
   gap: 5%;
   margin-top: 5%;
 }
+@media (min-height: 641px) and (max-width: 768px) {
+  body .trending-holder .HolderOfTrend {
+    margin-top: 0px;
+  }
+}
 body .trending-holder .HolderOfTrend img {
   border-radius: 50%;
+}
+@media (min-height: 641px) and (max-width: 768px) {
+  body .trending-holder .HolderOfTrend img {
+    height: 40px;
+    width: 40px;
+  }
 }
 @media (min-height: 720px) {
   body .trending-holder .HolderOfTrend img {
@@ -986,6 +1083,30 @@ footer {
   max-width: 100vw;
   background-color: aquamarine;
 }
+@media (min-height: 641px) and (max-width: 768px) {
+  footer {
+    height: 17.8571428571vh;
+    max-height: 55px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+footer i {
+  font-size: 28px;
+}
+@media (min-height: 641px) and (max-width: 425px) {
+  footer i {
+    font-size: 24px;
+  }
+}
+@media (min-height: 641px) and (max-width: 320px) {
+  footer i {
+    font-size: 18px;
+  }
+}
 
 @media (max-width: 964px) {
   nav {
@@ -997,12 +1118,5 @@ footer {
   }
   main {
     height: 100%;
-  }
-  footer {
-    height: 17.8571428571vh;
-    max-height: 55px;
-    position: fixed;
-    bottom: 0;
-    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
