@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .card-1 {
   grid-area: card-1;
 }
@@ -30,6 +31,7 @@
 
 html {
   overflow: hidden;
+  font-family: "Roboto", sans-serif;
 }
 @media (min-height: 641px) and (max-width: 768px) {
   html {
@@ -97,11 +99,15 @@ body nav .searchbar input {
   border-radius: 20px;
   border: transparent;
   background-color: rgb(226, 232, 240);
+  padding-left: 1vw;
 }
 @media (min-height: 641px) and (max-width: 768px) {
   body nav .searchbar input {
     width: 65vw;
+    height: 4vh;
     margin-left: -1rem;
+    padding-left: 3vw;
+    font-size: 0.8rem;
   }
 }
 @media (min-height: 720px) {
@@ -114,24 +120,28 @@ body nav .searchbar input {
   body nav .searchbar input {
     height: 40px;
     width: 520px;
+    font-size: 1.3rem;
   }
 }
 @media (min-height: 900px) {
   body nav .searchbar input {
     height: 40px;
     width: 550px;
+    font-size: 1.3rem;
   }
 }
 @media (min-height: 1050px) {
   body nav .searchbar input {
     height: 45px;
     width: 700px;
+    font-size: 1.6rem;
   }
 }
 @media (min-height: 1440px) {
   body nav .searchbar input {
     height: 60px;
     width: 1180px;
+    font-size: 2rem;
   }
 }
 body nav .searchbar i {
@@ -291,6 +301,9 @@ body nav .nexttosearchbar p {
 }
 body nav .nexttosearchbar i {
   font-weight: bold;
+}
+body nav .nexttosearchbar i:hover {
+  cursor: pointer;
 }
 @media (min-height: 720px) {
   body nav .nexttosearchbar i {
@@ -547,6 +560,11 @@ body nav .Buttons button {
   color: white;
   font-weight: bold;
   border: transparent;
+  transition: transform 0.5s ease-in-out;
+}
+body nav .Buttons button:hover {
+  cursor: grab;
+  transform: scale(1.1);
 }
 @media (min-height: 641px) and (max-width: 768px) {
   body nav .Buttons button {
@@ -610,6 +628,7 @@ body aside span:not([class=Heading]) i {
   transition: all 0.5s ease-in-out;
 }
 body aside span:not([class=Heading]):hover i {
+  cursor: grab;
   transform: scale(1.8);
 }
 body aside span {
@@ -808,7 +827,12 @@ body main .grid-wrap .tab .span2 {
   letter-spacing: 0.5em;
 }
 body main .grid-wrap .tab .span2 i {
+  transition: transform 0.5s ease-in-out;
   color: rgba(0, 0, 0, 0.8);
+}
+body main .grid-wrap .tab .span2 i:hover {
+  cursor: grab;
+  transform: scale(1.5);
 }
 @media (min-height: 720px) {
   body main .grid-wrap .tab .span2 i {
